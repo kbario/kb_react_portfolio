@@ -6,15 +6,14 @@ import Footer from './components/Footer';
 import { useState } from 'react';
 
 function App() {
-  const [pageInView, setPageInView] = useState('about')
-
+  const [pageInView, setPageInView] = useState('About')
 
   return (
-    <main className='w-screen h-screen bg-zinc-600'>
+    <div className='w-screen h-screen'>
       <Header pageInViewState={{pageInView, setPageInView}}/>
-      <Project pageInViewState={pageInView}/>
+      <Project pageInView={pageInView}/>
       <Footer/>
-    </main>
+    </div>
   );
 }
 
