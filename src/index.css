@@ -4,18 +4,21 @@
 
 @layer components {
   .nav-item {
-    @apply text-zinc-200 text-3xl sm:text-xl hover:text-zinc-300 transition-all duration-300;
+    @apply sm:text-zinc-200 text-3xl sm:text-xl hover:text-zinc-300 transition-all duration-300;
   }
   .nav-active {
-    @apply text-white underline;
+    @apply underline;
   }
   .burger-bits {
-    @apply w-8 h-1 bg-white rounded-full transition-all duration-300;
+    @apply w-8 h-1 bg-white rounded-full transition-all duration-500;
   }
   .burger-hide {
     @apply scale-0;
   }
   .nav {
-    @apply absolute top-32 right-0 w-full bg-transparent h-1/2 flex flex-col justify-around items-center transition-all duration-300 translate-x-full opacity-0 sm:static sm:translate-x-0 sm:flex-row sm:h-auto sm:opacity-100;
+    @apply absolute top-32 right-0 w-full bg-transparent h-1/2 flex flex-col justify-around items-center transition-all duration-500 translate-x-full opacity-0 sm:static sm:translate-x-0 sm:flex-row sm:h-auto sm:opacity-100 overflow-hidden;
+  }
+  .nav-backdrop {
+    @apply absolute top-20 right-0 w-full h-leftover bg-zinc-100 opacity-0 sm:hidden transition-all duration-500;
   }
 }
