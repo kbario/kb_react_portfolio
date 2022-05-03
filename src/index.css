@@ -4,7 +4,7 @@
 
 @layer components {
   .nav-item {
-    @apply text-zinc-200 text-3xl hover:text-zinc-300 transition-all duration-300;
+    @apply text-zinc-200 text-3xl sm:text-xl hover:text-zinc-300 transition-all duration-300;
   }
   .nav-active {
     @apply text-white underline;
