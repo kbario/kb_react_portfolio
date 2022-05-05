@@ -19,6 +19,6 @@
     @apply absolute top-32 right-0 w-full bg-transparent h-1/2 flex flex-col justify-around items-center transition-all duration-500 translate-x-full opacity-0 sm:static sm:translate-x-0 sm:flex-row sm:h-auto sm:opacity-100 overflow-hidden;
   }
   .nav-backdrop {
-    @apply absolute top-20 right-0 w-full h-leftover bg-zinc-100 opacity-0 sm:hidden transition-all duration-500;
+    @apply absolute top-20 right-0 w-full h-leftover bg-zinc-100 opacity-0 sm:hidden transition-all duration-500 translate-x-full;
   }
 }
