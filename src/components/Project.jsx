@@ -3,14 +3,14 @@ import Contact from "./project components/Contact"
 import Portfolio from "./project components/Portfolio"
 import Resume from "./project components/Resume"
 
-function Project({pageInView}) {
+function Project({pageInView, repos}) {
 
-    function RenderProject({pageInView}) {
+    function RenderProject({pageInView, repos}) {
         switch (pageInView) {
             case 'About':
                 return <About />
             case 'Portfolio':
-                return <Portfolio />
+                return <Portfolio repos={repos} />
             case 'Contact':
                 return <Contact />
             default:
@@ -20,7 +20,7 @@ function Project({pageInView}) {
 
     return (
         <main className="h-leftover w-full p-5 max-w-4xl mx-auto">
-            <RenderProject pageInView={pageInView}/>
+            <RenderProject pageInView={pageInView} repos={repos}/>
         </main>
     )
 }

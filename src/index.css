@@ -21,4 +21,21 @@
   .nav-backdrop {
     @apply absolute top-20 right-0 w-full h-leftover bg-zinc-100 opacity-0 sm:hidden transition-all duration-500 translate-x-full;
   }
+  .wave {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+  }
+  .wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 30px;
+  }
+  .wave .shape-fill {
+    fill: #1e293b;
+  }
 }
