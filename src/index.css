@@ -16,26 +16,40 @@
     @apply scale-0;
   }
   .nav {
-    @apply absolute top-32 right-0 w-full bg-transparent h-1/2 flex flex-col justify-around items-center transition-all duration-500 translate-x-full opacity-0 sm:static sm:translate-x-0 sm:flex-row sm:h-auto sm:opacity-100 overflow-hidden;
+    @apply absolute top-32 right-0 w-full bg-transparent h-1/2 flex flex-col justify-between items-center transition-all duration-500 translate-x-full opacity-0 sm:static sm:translate-x-0 sm:flex-row sm:h-auto sm:opacity-100;
   }
   .nav-backdrop {
     @apply absolute top-20 right-0 w-full h-leftover bg-zinc-100 opacity-0 sm:hidden transition-all duration-500 translate-x-full;
   }
-  .wave {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-  }
+
   .wave svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 30px;
+    @apply absolute top-16 w-full h-3 fill-slate-800 z-10;
   }
-  .wave .shape-fill {
-    fill: #1e293b;
+
+  .btn {
+    @apply px-3 py-1 rounded-sm shadow-sm transition-all;
+  }
+  .btn-hover {
+    @apply hover:shadow-lg hover:-translate-y-1;
+  }
+  .git-btn {
+    @apply btn btn-hover bg-zinc-800 text-zinc-200;
+  }
+  .dep-btn {
+    @apply btn btn-hover bg-sky-900 text-zinc-200;
+  }
+
+  .my-link {
+    @apply text-sky-600;
+  }
+
+  .form-nice {
+    @apply rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50;
+  }
+  .form-invalid {
+    @apply ring-red-300 ring-opacity-50 ring;
+  }
+  .error-msg {
+    @apply text-red-700;
   }
 }

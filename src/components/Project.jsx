@@ -19,7 +19,7 @@ function Project({pageInView, repos}) {
     }
 
     return (
-        <main className="h-leftover w-full p-5 max-w-4xl mx-auto">
+        <main className="pt-24 h-screen w-full p-5 overflow-y-auto">
             <RenderProject pageInView={pageInView} repos={repos}/>
         </main>
     )
