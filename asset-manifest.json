@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/kb-react-portfolio/static/css/main.3b7732be.css",
+    "main.js": "/kb-react-portfolio/static/js/main.61ec68b6.js",
+    "static/js/377.ce27658f.chunk.js": "/kb-react-portfolio/static/js/377.ce27658f.chunk.js",
+    "service-worker.js": "/kb-react-portfolio/service-worker.js",
+    "index.html": "/kb-react-portfolio/index.html",
+    "main.3b7732be.css.map": "/kb-react-portfolio/static/css/main.3b7732be.css.map",
+    "main.61ec68b6.js.map": "/kb-react-portfolio/static/js/main.61ec68b6.js.map",
+    "377.ce27658f.chunk.js.map": "/kb-react-portfolio/static/js/377.ce27658f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3b7732be.css",
+    "static/js/main.61ec68b6.js"
+  ]
+}
