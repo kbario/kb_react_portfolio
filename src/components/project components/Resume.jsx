@@ -1,8 +1,7 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import * as d3 from 'd3'
 
 import { data } from '../../data/proficiencies'
-
 
 function Resume({screenwidthProp}) {
 
