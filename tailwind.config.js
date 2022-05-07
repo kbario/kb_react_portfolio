@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       height: ({ theme }) => ({
-        leftover: `calc(100vh - 5rem)`,
+        leftover: `calc(100vh - 10rem)`,
       }),
     },
   },

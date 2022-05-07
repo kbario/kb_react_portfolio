@@ -1,14 +1,9 @@
 import { useState, useEffect } from "react"
 
-function Navigation({pageInViewState}) {
-    // state
-    const [burgerOpen, setBurgerOpen] = useState(false)
-    // useEffect to close menu on window resize
-    useEffect(() => {
-        window.addEventListener("resize", () => {setBurgerOpen(false)});
-    }, []);
+function Navigation({ pageInViewState, burgerOpenProp }) {
     
     // props
+    const {burgerOpen, setBurgerOpen} = burgerOpenProp
     const {pageInView, setPageInView} = pageInViewState
 
     // looping array
