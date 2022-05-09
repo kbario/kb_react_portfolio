@@ -67,7 +67,7 @@ function Contact() {
 
 
     return (
-        <section className="flex flex-col gap-1 max-w-4xl mx-auto overflow-y-scroll p-1">
+        <section className="flex flex-col gap-1 max-w-xl mx-auto overflow-y-scroll p-1">
             <h1 className="text-3xl">Contact Me</h1>
             
             {/* name */}

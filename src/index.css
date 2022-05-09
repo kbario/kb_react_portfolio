@@ -10,7 +10,7 @@
     @apply underline;
   }
   .burger-bits {
-    @apply w-8 h-1 bg-white rounded-full transition-all duration-500;
+    @apply w-8 h-1 bg-zinc-800  transition-all duration-500;
   }
   .burger-hide {
     @apply scale-0;
@@ -23,20 +23,20 @@
   }
 
   .wave svg {
-    @apply absolute top-16 w-full h-3 fill-slate-800 z-10;
+    @apply absolute top-16 w-full h-3 fill-slate-800;
   }
 
   .btn {
-    @apply px-3 py-1 rounded-sm shadow-sm transition-all;
+    @apply grow rounded-sm shadow-sm transition-all text-center py-2 px-8;
   }
   .btn-hover {
     @apply hover:shadow-lg hover:-translate-y-1;
   }
   .git-btn {
-    @apply btn btn-hover bg-zinc-800 text-zinc-200;
+    @apply btn btn-hover border border-zinc-800 text-zinc-800 hover:bg-zinc-300;
   }
-  .dep-btn {
-    @apply btn btn-hover bg-sky-900 text-zinc-200;
+  .blue-btn {
+    @apply btn btn-hover bg-sky-900 text-zinc-200 hover:bg-sky-800;
   }
 
   .my-link {
@@ -44,7 +44,7 @@
   }
 
   .form-nice {
-    @apply rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50;
+    @apply rounded-sm border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50;
   }
   .form-invalid {
     @apply ring-red-300 ring-opacity-50 ring;

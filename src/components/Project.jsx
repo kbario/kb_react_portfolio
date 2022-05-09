@@ -3,7 +3,7 @@ import Contact from "./project components/Contact"
 import Portfolio from "./project components/Portfolio"
 import Resume from "./project components/Resume"
 
-function Project({pageInView, repos, screenwidthProp}) {
+function Project({pageInView, repos}) {
 
     function RenderProject({pageInView, repos}) {
         switch (pageInView) {
@@ -14,12 +14,12 @@ function Project({pageInView, repos, screenwidthProp}) {
             case 'Contact':
                 return <Contact />
             default:
-                return <Resume screenwidthProp={screenwidthProp}/>
+                return <Resume />
         }
     }
 
     return (
-        <main className="pt-24 h-screen w-full p-5 overflow-y-auto">
+        <main className="h-leftover w-full p-5 overflow-y-auto bg-zinc-50">
             <RenderProject pageInView={pageInView} repos={repos}/>
         </main>
     )

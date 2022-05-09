@@ -1,6 +1,6 @@
 function About() {
     return (
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-5 max-w-4xl mx-auto overflow-y-scroll">
             <h1 className="text-2xl">Hi, I'm Kyle.</h1>
             <p>I'm a junior fullstack developer currently completing a coding bootcamp at UWA.</p>
             <p>I grew up on a farm near <a href="https://mountbarkerwa.com.au/" target="_blank" className="text-sky-700" rel="noreferrer">Mount Barker, WA</a> and moved to Perth to study science at The University of Notre Dame Australia in Fremantle.</p>
