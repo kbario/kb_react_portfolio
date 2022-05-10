@@ -5,7 +5,7 @@ import Project from './components/Project';
 import Footer from './components/Footer';
 import { useState, useEffect } from 'react';
 
-const bootRepos = ["getCultured", 'techBlog', "buildAPage", "ractWeather"]
+const bootRepos = ["getCultured", 'techBlog', "buildAPage", "jatePwaTextEditor", "ractWeather"]
 const bootImgs = [
   "https://repository-images.githubusercontent.com/489247996/cb2d91d2-0b7d-412f-a25c-ae1a46524da6",
   "https://repository-images.githubusercontent.com/470821465/15ba0dde-ef5f-4509-b0b3-75a8dba0ab12",
@@ -14,7 +14,7 @@ const bootImgs = [
 const metaRepos = ['concentr8r', 'NMRalter8r'];
 
 function App() {
-  const [pageInView, setPageInView] = useState('Portfolio')
+  const [pageInView, setPageInView] = useState('Resume')
 
   const [metaRepoData, setMetaRepoData] = useState("")
   const [bootRepoData, setBootRepoData] = useState("")
@@ -40,9 +40,17 @@ function App() {
         const depData = await depResp.json()
 
         data.img = repoArray===bootRepos? bootImgs[idx]: undefined
-        data.deployedAt = depData[0].description === null ? depData[0].environment : depData[0].description
+        data.isDeployed = depData.length === 0 ? false : true
+        if (data.isDeployed === true) {
+          data.deployedAt = depData[0]?.description === "" ? depData[0].environment : depData[0].description
+        }
+
+        const langResp = await fetch(data.languages_url);
+        data.lang = await langResp.json()
+
         return data
       }))
+      
       if(repoArray === metaRepos){
         setMetaRepoData(data)
       }
@@ -64,7 +72,7 @@ function App() {
           <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="shape-fill"></path>
         </svg>
       </div> */}
-      <Project pageInView={pageInView} repos={[ metaRepoData, bootRepoData]} />
+      <Project pageInView={pageInView} repos={[ metaRepoData, bootRepoData ]} />
       <Footer />
     </div>
   );

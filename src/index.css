@@ -33,10 +33,13 @@
     @apply hover:shadow-lg hover:-translate-y-1;
   }
   .git-btn {
-    @apply btn btn-hover border border-zinc-800 text-zinc-800 hover:bg-zinc-300;
+    @apply btn btn-hover border border-zinc-800 text-zinc-800 hover:bg-zinc-800 hover:text-zinc-200 hover:fill-zinc-200;
   }
   .blue-btn {
-    @apply btn btn-hover bg-sky-900 text-zinc-200 hover:bg-sky-800;
+    @apply btn btn-hover bg-sky-900 text-zinc-200 hover:bg-sky-700;
+  }
+  .disabled-btn {
+    @apply btn btn-hover border border-zinc-500 text-zinc-500 hover:bg-zinc-400 hover:cursor-not-allowed;
   }
 
   .my-link {

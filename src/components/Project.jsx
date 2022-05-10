@@ -14,7 +14,7 @@ function Project({pageInView, repos}) {
             case 'Contact':
                 return <Contact />
             default:
-                return <Resume />
+                return <Resume repos={repos} />
         }
     }
 
