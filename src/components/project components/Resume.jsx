@@ -1,4 +1,30 @@
-function Resume() {
+import * as d3 from "d3"
+import { useEffect, useState } from 'react'
+
+function Resume({repos}) {
+
+  const [ metaRepoData, bootRepoData ] = repos
+  const [langs, setLangs] = useState({})
+
+  useEffect(() => {
+    function myFunc(acc, currentRepo) {
+      for (const [key] of Object.entries(currentRepo.lang)) {
+        acc[key] = acc[key] ? acc[key] + currentRepo.lang[key] : currentRepo.lang[key]
+      }
+      return acc
+    }
+    const metaLangs = metaRepoData.reduce(myFunc, {})
+    const bootLangs = bootRepoData.reduce(myFunc, {})
+    const langs = [metaLangs,bootLangs].reduce((acc, langs) => {
+      for (const [key] of Object.entries(langs)) {
+        acc[key] = acc[key] ? acc[key] + langs[key] : langs[key]
+      }
+      return acc
+    }, {})
+
+    setLangs(langs)
+
+  },[ metaRepoData, bootRepoData ])
 
     return (
         <section className="flex flex-col gap-5 max-w-4xl mx-auto overflow-y-scroll items-center">
