@@ -12,12 +12,14 @@ const bootImgs = [
   "https://repository-images.githubusercontent.com/489192653/63d6977f-357d-41d4-a783-6bef683f0510",
 ]
 const metaRepos = ['concentr8r', 'NMRalter8r'];
+const backRepos = ['ecomBackend', 'mongooseSocialNetworkApi'];
 
 function App() {
-  const [pageInView, setPageInView] = useState('Resume')
+  const [pageInView, setPageInView] = useState('About')
 
   const [metaRepoData, setMetaRepoData] = useState("")
   const [bootRepoData, setBootRepoData] = useState("")
+  const [backRepoData, setBackRepoData] = useState("")
 
   const [burgerOpen, setBurgerOpen] = useState(false)
   // useEffect to close menu on window resize
@@ -57,9 +59,13 @@ function App() {
       if(repoArray === bootRepos){
         setBootRepoData(data)
       }
+      if(repoArray === backRepos){
+        setBackRepoData(data)
+      }
     }
     getRepoData(bootRepos)
     getRepoData(metaRepos)
+    getRepoData(backRepos)
   },[])
 
 
@@ -72,7 +78,7 @@ function App() {
           <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="shape-fill"></path>
         </svg>
       </div> */}
-      <Project pageInView={pageInView} repos={[ metaRepoData, bootRepoData ]} />
+      <Project pageInView={pageInView} repos={[ metaRepoData, bootRepoData, backRepoData ]} />
       <Footer />
     </div>
   );

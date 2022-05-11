@@ -1,6 +1,6 @@
 function Portfolio({repos}) {
 
-    const [ metaRepoData, bootRepoData ] = repos
+    const [ metaRepoData, bootRepoData, backRepoData ] = repos
 
     if(metaRepoData === "" || bootRepoData === ""){
         return <div className="w-full h-full flex items-center justify-center gap-2">
@@ -16,10 +16,19 @@ function Portfolio({repos}) {
     return (
         <section className="flex flex-col gap-10 max-w-4xl mx-auto overflow-y-scroll">
             <section className="flex flex-col gap-5">
-                <h2 className="text-2xl">Full Stack</h2>
+                <h2 className="text-2xl">Front-End / Full Stack</h2>
                 <p className="font-mukta">After falling in love with programming during my honours year, I enrolled in the UWA fullstack bootcamp. Here are some of the applications I created both solo and in groups during the course.</p>
                 <section className="grid grid-cols-1 auto-rows-max sm:grid-cols-2 gap-10">
                     {bootRepoData.map((repo) => (
+                        repo.id ? <RepoSection key={repo.id} repo={repo}/> : <div key={Math.random()}></div>
+                    ))}
+                </section>
+            </section>
+            <section className="flex flex-col gap-5">
+                <h2 className="text-xl">Back-End</h2>
+                <p className="font-mukta">REST APIs written in JavaScript utilising popular databases and their respective ORM/ODMs to efficiently recieve requests and send responses.</p>
+                <section className="grid grid-cols-1 auto-rows-max sm:grid-cols-2 gap-10">
+                    {backRepoData.map((repo) => (
                         repo.id ? <RepoSection key={repo.id} repo={repo}/> : <div key={Math.random()}></div>
                     ))}
                 </section>
