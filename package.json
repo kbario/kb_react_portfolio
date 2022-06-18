@@ -2,7 +2,7 @@
   "name": "kb-react-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://kbario.github.io/kb-react-portfolio",
+  "homepage": "https://kbario.github.io/kb_react_portfolio/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^11.2.7",

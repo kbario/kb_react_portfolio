@@ -32,6 +32,7 @@ function App() {
   },[pageInView])
 
   useEffect(() => {
+
     const getRepoData = async(repoArray) => {
       const data = await Promise.all(repoArray.map(async (repoName, idx) => {
         const resp = await fetch(`https://api.github.com/repos/kbario/${repoName}`);
@@ -52,6 +53,18 @@ function App() {
 
         return data
       }))
+
+      const request = new XMLHttpRequest();
+      request.open('GET', "https://github.com/kbario/getCultured", true);
+      request.send(null);
+      request.onreadystatechange = function () {
+          if (request.readyState === 4 && request.status === 200) {
+              const type = request.getResponseHeader('Content-Type');
+              if (type.indexOf("text") !== 1) {
+                  return request.responseText;
+              }
+          }
+      }
       
       if(repoArray === metaRepos){
         setMetaRepoData(data)
