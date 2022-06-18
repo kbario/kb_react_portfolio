@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/kb-react-portfolio/static/css/main.cfa46692.css",
-    "main.js": "/kb-react-portfolio/static/js/main.e8381bef.js",
-    "static/js/377.ce27658f.chunk.js": "/kb-react-portfolio/static/js/377.ce27658f.chunk.js",
-    "service-worker.js": "/kb-react-portfolio/service-worker.js",
-    "index.html": "/kb-react-portfolio/index.html",
-    "main.cfa46692.css.map": "/kb-react-portfolio/static/css/main.cfa46692.css.map",
-    "main.e8381bef.js.map": "/kb-react-portfolio/static/js/main.e8381bef.js.map",
-    "377.ce27658f.chunk.js.map": "/kb-react-portfolio/static/js/377.ce27658f.chunk.js.map"
+    "main.css": "/kb_react_portfolio/static/css/main.cfa46692.css",
+    "main.js": "/kb_react_portfolio/static/js/main.8b926622.js",
+    "static/js/377.ce27658f.chunk.js": "/kb_react_portfolio/static/js/377.ce27658f.chunk.js",
+    "service-worker.js": "/kb_react_portfolio/service-worker.js",
+    "index.html": "/kb_react_portfolio/index.html",
+    "main.cfa46692.css.map": "/kb_react_portfolio/static/css/main.cfa46692.css.map",
+    "main.8b926622.js.map": "/kb_react_portfolio/static/js/main.8b926622.js.map",
+    "377.ce27658f.chunk.js.map": "/kb_react_portfolio/static/js/377.ce27658f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cfa46692.css",
-    "static/js/main.e8381bef.js"
+    "static/js/main.8b926622.js"
   ]
 }
